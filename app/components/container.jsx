@@ -3,7 +3,7 @@ import React from 'react'
 
 const GlobalContainer = ({ children,className }) => {
   return (
-    <div className={`container mx-auto px-12 ${className}`}>
+    <div className={` mx-auto px-12 ${className}`}>
       {children}
     </div>
   )

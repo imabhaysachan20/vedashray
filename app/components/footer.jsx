@@ -1,9 +1,11 @@
 import React from 'react'
 import { calistoga } from '../fonts/fonts'
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
+import GlobalContainer from './container'
 
 function Footer() {
   return (
+    <GlobalContainer className="bg-[#d7edfc]">
     <footer className='bg-[#d7edfc] py-8 md:py-12'>
       <div className='container mx-auto px-4'>
         <div className='grid grid-cols-1 md:grid-cols-2  bg-[#c7e3f8] p-8 border border-[#4a93c6] border-2 border-dashed rounded-2xl gap-8'>
@@ -57,6 +59,7 @@ function Footer() {
       </div>
 
     </footer>
+    </GlobalContainer>
   )
 }
 

@@ -144,3 +144,6 @@
 .animate-backgroundPosition2 {
   animation: backgroundPosition 50s ease-in-out infinite reverse;
 }
+html {
+  scroll-behavior: smooth;
+}
