@@ -2,7 +2,7 @@ import React from 'react'
 
 const QuoteComponent = () => {
   return (
-    <div className="bg-gray-200 p-8 rounded-lg relative  mx-auto">
+    <div className="bg-gray-200 p-8 rounded-lg relative mx-auto">
       {/* Big quote at the top-right */}
       <div className="absolute top-2 left-2 text-6xl text-black opacity-20">
       ❝

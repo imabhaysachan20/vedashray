@@ -3,6 +3,8 @@ import Hero from "./components/hero";
 import QuoteComponent from "./components/quote";
 import GlobalContainer from "./components/container";
 import WavyDiv from "./components/wavyDiv";
+import Client from "./components/clientsstrip";
+import Testimony from "./components/testimony";
 
 export default function Home() {
   return (
@@ -12,7 +14,8 @@ export default function Home() {
       <QuoteComponent/>
       </GlobalContainer>
       <WavyDiv/>
-      
+      <Testimony/>
+      <Client/>
     </div>
   );
 }
