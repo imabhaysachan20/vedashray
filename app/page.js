@@ -6,6 +6,7 @@ import WavyDiv from "./components/wavyDiv";
 import Client from "./components/clientsstrip";
 import Testimony from "./components/testimony";
 import Services from "./components/services";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Testimony/>
       <Client/>
       <Services/>
+      <Footer/>
     </div>
   );
 }
