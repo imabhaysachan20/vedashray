@@ -21,7 +21,7 @@ export default function Home() {
       <Testimony/>
       <Client/>
       <div className="bg-white" id ="services">
-    <div className='relative bg-[#3e8bc2] h-[20vh] mt-24 flex items-center justify-center'>
+    <div className='relative bg-[#3e8bc2] h-[20vh] mt-24` flex items-center justify-center'>
     <div className="absolute w-full bottom-0 bg-[url('/wave2.svg')] bg- h-[30px] mt-40 bg-contain animate-backgroundPosition"></div>  
 
     
@@ -33,7 +33,7 @@ export default function Home() {
       <Services/>
       </GlobalContainer>
       <GlobalContainer className="bg-[#d7edfc]">
-      <Footer/>
+
       </GlobalContainer>
       
     </div>
