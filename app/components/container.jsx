@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
 
-const GlobalContainer = ({ children }) => {
+const GlobalContainer = ({ children,className }) => {
   return (
-    <div className="container mx-auto px-12">
+    <div className={`container mx-auto px-12 ${className}`}>
       {children}
     </div>
   )

@@ -5,6 +5,7 @@ import GlobalContainer from "./components/container";
 import WavyDiv from "./components/wavyDiv";
 import Client from "./components/clientsstrip";
 import Testimony from "./components/testimony";
+import Services from "./components/services";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WavyDiv/>
       <Testimony/>
       <Client/>
+      <Services/>
     </div>
   );
 }
