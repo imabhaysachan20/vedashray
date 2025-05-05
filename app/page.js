@@ -9,10 +9,10 @@ export default function Home() {
     <div>
       <GlobalContainer>
       <Hero/>
-      
       <QuoteComponent/>
       </GlobalContainer>
       <WavyDiv/>
+      
     </div>
   );
 }
