@@ -1,6 +1,14 @@
 // pages/contact.js
 "use client";
-import { useCallback, useState } from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import {dropdownServies} from "@/lib/services"
+import { useCallback, useEffect, useState } from "react";
 import { Button, } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,9 +18,18 @@ import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ContactUs() {
   const [isSubmitting,setIsSubmitting] = useState(false);
+  const searchParams = useSearchParams();
+  const source = searchParams.get("source");
+  
+  const [selectedService, setSelectedService] = useState(source || "");
+  
+
+
+  
   const handleSubmit = useCallback((e) => {
     setIsSubmitting(true)
     e.preventDefault();
@@ -121,6 +138,26 @@ export default function ContactUs() {
           className="w-full mt-2 p-3 bg-white text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
         />
       </div>
+      <div>
+ 
+      <Select 
+  name="service" 
+  value={selectedService} 
+  onValueChange={setSelectedService}
+>
+  <SelectTrigger className="w-full">
+    <SelectValue placeholder="Inquiring for service..."/>
+  </SelectTrigger>
+  <SelectContent>
+    {dropdownServies.map((service) => (
+      <SelectItem key={service} value={service}>
+        {service}
+      </SelectItem>
+    ))}
+  </SelectContent>
+</Select>
+<input type="hidden" name="service" value={selectedService} />
+        </div>
       <div>
         <button
         disabled={isSubmitting}

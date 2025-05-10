@@ -19,16 +19,15 @@ export default function Home() {
       <WavyDiv/>
       <Testimony/>
       <Client/>
-      <div className="bg-white" id ="services">
-    <div className='relative bg-[#3e8bc2] h-[20vh] mt-24` flex items-center justify-center'>
-    <div className="absolute w-full bottom-0 bg-[url('/wave2.svg')] bg- h-[30px] mt-40 bg-contain animate-backgroundPosition"></div>  
-
-    
-    </div>
-    <h2 className={`${calistoga.className} mt-10 text-center text-4xl font-bold text-gray-800 leading-12`}>Our Services</h2>
-    <p className='mt-4 leading-7 text-center font-medium'>We offer all types of
-    corporate secretarial services:</p>
-    </div>
+      <div className="bg-white" id="services">
+        <div className='relative bg-[#3e8bc2] h-[15vh] sm:h-[20vh] mt-12 sm:mt-24 flex items-center justify-center'>
+          <div className="absolute w-full bottom-0 bg-[url('/wave2.svg')] h-[20px] sm:h-[30px] bg-contain animate-backgroundPosition"></div>  
+        </div>
+        <div className="px-4 sm:px-0">
+          <h2 className={`${calistoga.className} mt-8 sm:mt-10 text-center text-3xl sm:text-4xl font-bold text-gray-800 leading-tight sm:leading-12`}>Our Services</h2>
+          <p className='mt-2 sm:mt-4 leading-6 sm:leading-7 text-center text-sm sm:text-base font-medium'>We offer all types of corporate secretarial services:</p>
+        </div>
+      </div>
       <GlobalContainer className="bg-white bg-gradient-to-t from-[#d7edfc] to-transparent">
       <Services/>
       </GlobalContainer>

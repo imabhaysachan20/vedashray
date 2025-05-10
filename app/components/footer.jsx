@@ -31,6 +31,7 @@ function Footer() {
           
           <div className='bg-gray-50 p-6 rounded-xl'>
           <h3 className={`text-lg font-bold mb-4 ${calistoga.className}`}>BRANCH OFFICE</h3>
+          <div className='flex flex-col gap-y-2'>
             <p className=' mb-2 flex items-start '>
               <FaMapMarkerAlt className="mr-2 mt-1 text-[#4a93c6]" />
               02/102 sector 2 vikas nagar lucknow 226022, opposite bharat gas agency
@@ -51,6 +52,7 @@ function Footer() {
               <FaEnvelope className="mr-2 text-[#4a93c6]" />
               <a href='mailto:csshradhashukla@gmail.com' className='hover:underline'>csshradhashukla@gmail.com</a>
             </p>
+            </div>
           </div>
           
           
