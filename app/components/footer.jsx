@@ -11,7 +11,7 @@ function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-2  bg-[#c7e3f8] p-8 border border-[#4a93c6] border-2 border-dashed rounded-2xl gap-8'>
           <div>
             <h3 className={`text-lg font-bold mb-4 ${calistoga.className}`}>CORPORATE OFFICE</h3>
-            <p className='text-sm flex items-start'>
+            <p className=' flex items-start'>
               <FaMapMarkerAlt className="mr-2 mt-1 text-[#4a93c6]" />
               ca-06/705, Capital Athena, plot No. GH-12A-2, Sector-1, Gr. Noida West-201306
             </p>
@@ -31,23 +31,23 @@ function Footer() {
           
           <div className='bg-gray-50 p-6 rounded-xl'>
           <h3 className={`text-lg font-bold mb-4 ${calistoga.className}`}>BRANCH OFFICE</h3>
-            <p className='text-sm mb-2 flex items-start'>
+            <p className=' mb-2 flex items-start '>
               <FaMapMarkerAlt className="mr-2 mt-1 text-[#4a93c6]" />
               02/102 sector 2 vikas nagar lucknow 226022, opposite bharat gas agency
             </p>
-            <p className='text-sm mb-1 flex items-center'>
+            <p className=' mb-1 flex items-center'>
               <FaPhone className="mr-2 text-[#4a93c6]" />
-              Phone: <a href='tel:8177002646' className='hover:underline ml-1'>8177002646</a>
+              <a href='tel:8177002646' className='hover:underline ml-1'>8177002646</a>
             </p>
-            <p className='text-sm mb-1 flex items-center'>
+            <p className=' mb-1 flex items-center'>
               <FaEnvelope className="mr-2 text-[#4a93c6]" />
-              Email: <a href='mailto:business@vedashray.com' className='hover:underline ml-1'>business@vedashray.com</a>
+              <a href='mailto:business@vedashray.com' className='hover:underline ml-1'>business@vedashray.com</a>
             </p>
-            <p className='text-sm mb-1 flex items-center'>
+            <p className=' mb-1 flex items-center'>
               <FaEnvelope className="mr-2 text-[#4a93c6]" />
               <a href='mailto:admin@vedashray.com' className='hover:underline'>admin@vedashray.com</a>
             </p>
-            <p className='text-sm flex items-center'>
+            <p className=' flex items-center'>
               <FaEnvelope className="mr-2 text-[#4a93c6]" />
               <a href='mailto:csshradhashukla@gmail.com' className='hover:underline'>csshradhashukla@gmail.com</a>
             </p>
@@ -55,7 +55,7 @@ function Footer() {
           
           
         </div>
-        <p className='mt-4 text-sm text-gray-500'>© 2025 Vedashray Corpsec LLP. All rights reserved</p>
+        <p className='mt-4  text-gray-500'>© 2025 Vedashray Corpsec LLP. All rights reserved</p>
       </div>
 
     </footer>

@@ -5,23 +5,25 @@ import { Menu, X, Facebook, Twitter, Instagram, LucideGavel, LucideGalleryVertic
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import {calistoga} from "@/app/fonts/fonts"
-import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Link from 'next/link'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '#about' },
-    { name: 'Service', href: '#services' },
+    { name: 'Home', href: './#top' },
+    { name: 'About', href: './#about' },
+    { name: 'Service', href: './#services' },
     { name: 'Contact', href: '/contact' },
   ]
 
   const socialIcons = [
     { icon: <FaFacebook className="w-4 h-4" />, href: '#' },
     { icon: <FaTwitter className="w-4 h-4" />, href: '#' },
-    { icon: <FaLinkedin className="w-4 h-4" />, href: '#' },
+    { icon: <FaLinkedin className="w-4 h-4" />, href: 'https://www.linkedin.com/company/vedashray-corpsec-llp/' },
+    { icon: <FaInstagram className="w-4 h-4" />, href: 'https://www.instagram.com/vedashray_corpsec_llp' },
   ]
   const { scrollYProgress } = useScroll();
 
@@ -32,7 +34,7 @@ function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Heading */}
           <div  className="flex-shrink-0 flex items-center gap-x-8">
-            <h1 className={`text-2xl font-bold ${calistoga.className}`}>Vedashray</h1>
+            <Link href={"./"}><h1 className={`text-3xl uppercase font-bold ${calistoga.className}`}>Vedashray</h1></Link>
             <div className='hidden lg:block h-6 w-0.5 bg-gray-300'></div>
             <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -64,7 +66,7 @@ function Header() {
             ))}
             </div>
             <div className='h-6 w-0.5 bg-gray-300'></div>
-            <Button size={'lg'} className="rounded-4xl font-bold text-sm cursor-pointer">Get In Touch <ArrowRight/></Button>
+            <Link href={'/contact'}><Button size={'lg'} className="rounded-4xl font-bold text-sm cursor-pointer">Get In Touch <ArrowRight/></Button></Link>
           </div>
 
           {/* Mobile Menu Button */}

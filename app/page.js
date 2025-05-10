@@ -14,9 +14,8 @@ export default function Home() {
     <div>
       <GlobalContainer>
       <Hero/>
-      <QuoteComponent/>
       </GlobalContainer>
-
+      
       <WavyDiv/>
       <Testimony/>
       <Client/>
@@ -26,8 +25,9 @@ export default function Home() {
 
     
     </div>
-    <h2 className={`${calistoga.className} mt-10 text-center text-4xl font-bold text-gray-800 leading-12`}>We offer a variety of <br/> services 🌊</h2>
-    <p className='mt-4 leading-7 text-center font-medium'>We offer an array of quality and fruitful<br></br> corporate secretarial services:</p>
+    <h2 className={`${calistoga.className} mt-10 text-center text-4xl font-bold text-gray-800 leading-12`}>Our Services</h2>
+    <p className='mt-4 leading-7 text-center font-medium'>We offer all types of
+    corporate secretarial services:</p>
     </div>
       <GlobalContainer className="bg-white bg-gradient-to-t from-[#d7edfc] to-transparent">
       <Services/>

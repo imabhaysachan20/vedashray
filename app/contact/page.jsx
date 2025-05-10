@@ -109,6 +109,19 @@ export default function ContactUs() {
         />
       </div>
       <div>
+        <label htmlFor="message" className="block text-gray-800 font-semibold">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Your Message"
+          rows={4}
+          className="w-full mt-2 p-3 bg-white text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
+        />
+      </div>
+      <div>
         <button
         disabled={isSubmitting}
           type="submit"
