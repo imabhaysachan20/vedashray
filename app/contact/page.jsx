@@ -1,5 +1,5 @@
-// pages/contact.js
 "use client";
+
 import {
   Select,
   SelectContent,
@@ -8,27 +8,21 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import {dropdownServies} from "@/lib/services"
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, Suspense } from "react";
 import { Button, } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-// pages/contact.js
-// pages/contact.js
-// pages/contact.js
 import Image from "next/image";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function ContactUs() {
+function ContactForm() {
   const [isSubmitting,setIsSubmitting] = useState(false);
   const searchParams = useSearchParams();
   const source = searchParams.get("source");
   
   const [selectedService, setSelectedService] = useState(source || "");
-  
-
-
   
   const handleSubmit = useCallback((e) => {
     setIsSubmitting(true)
@@ -39,7 +33,7 @@ export default function ContactUs() {
   
     // Convert formData to a regular object to view the data
     const formValues = Object.fromEntries(formData.entries());
-    fetch('https://sheetdb.io/api/v1/', {
+    fetch('https://sheetdb.io/api/v1/YOUR_SHEET_ID', {
       method: 'POST',
       headers: {
           'Accept': 'application/json',
@@ -173,5 +167,13 @@ export default function ContactUs() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ContactUs() {
+  return (
+    <Suspense fallback={<div className="container mx-auto my-24 p-6 md:p-10 bg-[#f7f5f0] rounded-lg text-center">Loading...</div>}>
+      <ContactForm />
+    </Suspense>
   );
 }
