@@ -71,13 +71,13 @@ function Header() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <Sheet>
+            <Sheet >
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="h-9 w-9 p-0">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+              <SheetContent side="right" className="w-[280px] sm:w-[350px] p-2">
                 <div className="flex flex-col space-y-6 mt-8">
                   {navItems.map((item) => (
                     <a
@@ -99,7 +99,7 @@ function Header() {
                       </a>
                     ))}
                   </div>
-                  <Button className="mt-4 w-full">Get In Touch</Button>
+                  <Link href={"/contact"}><Button className="mt-4 w-full">Get In Touch</Button></Link>
                 </div>
               </SheetContent>
             </Sheet>

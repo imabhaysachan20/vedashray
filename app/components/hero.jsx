@@ -15,7 +15,7 @@ function Hero() {
         <h2>VEDASHRAY CORPSEC LLP👋</h2>
         </div>
         <div className="max-w-[750px] flex text-center">
-        <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl ${calistoga.className} leading-tight sm:leading-18`}>
+        <h2 className={`text-[28px] sm:text-4xl md:text-5xl lg:text-6xl ${calistoga.className} leading-tight sm:leading-18`}>
         Ensuring Compliance.<br></br> Empowering Governance.
         </h2>
         </div>
