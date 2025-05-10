@@ -120,6 +120,27 @@ function ContactForm() {
         />
       </div>
       <div>
+ 
+ <Select 
+name="service" 
+
+value={selectedService} 
+onValueChange={setSelectedService}
+>
+<SelectTrigger className="w-full">
+<SelectValue placeholder="Inquiring for service..."/>
+</SelectTrigger>
+<SelectContent>
+{dropdownServies.map((service) => (
+ <SelectItem key={service} value={service}>
+   {service}
+ </SelectItem>
+))}
+</SelectContent>
+</Select>
+<input type="hidden" name="service" value={selectedService} />
+   </div>
+      <div>
         <label htmlFor="message" className="block text-gray-800 font-semibold">
           Message
         </label>
@@ -132,26 +153,7 @@ function ContactForm() {
           className="w-full mt-2 p-3 bg-white text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
         />
       </div>
-      <div>
- 
-      <Select 
-  name="service" 
-  value={selectedService} 
-  onValueChange={setSelectedService}
->
-  <SelectTrigger className="w-full">
-    <SelectValue placeholder="Inquiring for service..."/>
-  </SelectTrigger>
-  <SelectContent>
-    {dropdownServies.map((service) => (
-      <SelectItem key={service} value={service}>
-        {service}
-      </SelectItem>
-    ))}
-  </SelectContent>
-</Select>
-<input type="hidden" name="service" value={selectedService} />
-        </div>
+     
       <div>
         <button
         disabled={isSubmitting}

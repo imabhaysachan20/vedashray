@@ -13,7 +13,7 @@ function Footer() {
             <h3 className={`text-lg font-bold mb-4 ${calistoga.className}`}>CORPORATE OFFICE</h3>
             <p className=' flex items-start'>
               <FaMapMarkerAlt className="mr-2 mt-1 text-[#4a93c6]" />
-              ca-06/705, Capital Athena, plot No. GH-12A-2, Sector-1, Gr. Noida West-201306
+              CA-06/705, Capital Athena, Plot No. GH-12A-2, Sector-1, Gr. Noida West-201306
             </p>
             <div className='mt-4 w-full'>
               <iframe 
@@ -34,7 +34,7 @@ function Footer() {
           <div className='flex flex-col gap-y-2'>
             <p className=' mb-2 flex items-start '>
               <FaMapMarkerAlt className="mr-2 mt-1 text-[#4a93c6]" />
-              02/102 sector 2 vikas nagar lucknow 226022, opposite bharat gas agency
+              02/102 Sector 2 Vikas Nagar Lucknow 226022, Opposite Bharat Gas Agency
             </p>
             <p className=' mb-1 flex items-center'>
               <FaPhone className="mr-2 text-[#4a93c6]" />

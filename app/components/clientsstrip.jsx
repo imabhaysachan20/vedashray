@@ -6,8 +6,8 @@ function Client() {
     '/client2.png',
     '/client3.png',
     '/client4.png',
+    '/client10.png',
     '/client5.avif',
-    '/client1.avif'
   ];
 
   return (

@@ -47,7 +47,7 @@ export default function WavyBorderBox() {
             </div>
           </div>
           <div className="mt-6 md:mt-0">
-            <img className="max-w-[280px] sm:max-w-[340px] md:max-w-[24rem] rounded-4xl border-white border-4" src="mock.avif" alt="Mock image"></img>
+            <img className="max-w-[280px] sm:max-w-[340px] md:max-w-[24rem] rounded-4xl border-white border-4" src="statue.jpg" alt="Mock image"></img>
           </div> 
         </div>
       </>
