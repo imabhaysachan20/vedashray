@@ -67,7 +67,7 @@ function ContactForm() {
         
         {/* Left Side: Stock Image */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <Image
+          <img
             src="/contact.png" // Replace with your stock image path
             alt="Contact Us"
             width={500}

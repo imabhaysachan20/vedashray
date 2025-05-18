@@ -14,11 +14,11 @@ export default function WavyBorderBox() {
         <div id="about" className="relative bg-[url('/wave.svg')] h-[20px] sm:h-[30px] bg-contain animate-backgroundPosition">
           <div className="absolute opacity-15 w-full -z-1 bottom-1 bg-[url('/wave.svg')] h-[22px] sm:h-[32px] mt-40 bg-contain animate-backgroundPosition2"></div>
         </div>
-        <div className="min-h-screen bg-[#255C3B] flex flex-col md:flex-row items-center justify-center md:justify-evenly pt-20 sm:pt-32 md:pt-44 pb-16 sm:pb-20 md:pb-28 px-4 sm:px-10 gap-y-10 md:gap-x-16 text-white">
+        <div className="min-h-screen bg-[#3E8BC2] flex flex-col md:flex-row items-center justify-center md:justify-evenly pt-20 sm:pt-32 md:pt-44 pb-16 sm:pb-20 md:pb-28 px-4 sm:px-10 gap-y-10 md:gap-x-16 text-white">
           <div className="px-4 sm:px-10">
             <div className="relative">
               <svg className="w-8 h-8 sm:w-10 sm:h-10 absolute -top-6 -left-6 sm:-top-9 sm:-left-9" viewBox="0 0 37 37" id="svg1690633607"><path d="M 27.5 24 C 27.5 24 10.863 17.495 5 5.5" fill="transparent" stroke-width="3" stroke="var(--token-783c9c01-21bf-4403-bd1f-a410e07db715, rgb(247, 245, 240)) /* {&quot;name&quot;:&quot;Main / Warm White&quot;} */" stroke-linecap="round"></path><path d="M 15 12 C 15 12 3.908 7.781 0 0" transform="translate(7.567 23.943) rotate(-27 7.5 6)" fill="transparent" stroke-width="3" stroke="var(--token-783c9c01-21bf-4403-bd1f-a410e07db715, rgb(247, 245, 240)) /* {&quot;name&quot;:&quot;Main / Warm White&quot;} */" stroke-linecap="round"></path><path d="M 33.5 16 C 33.5 16 27.5 11.683 27.5 3" fill="transparent" stroke-width="3" stroke="var(--token-783c9c01-21bf-4403-bd1f-a410e07db715, rgb(247, 245, 240)) /* {&quot;name&quot;:&quot;Main / Warm White&quot;} */" stroke-linecap="round"></path></svg>
-              <h1 className={`${calistoga.className} text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-15`}>Helping with Incorporation <br></br>and <span className="text-[#54d186]">ROC Companies</span></h1>
+              <h1 className={`${calistoga.className} text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-15`}>Helping with Incorporation <br></br>and <span className="text-[#c9e4fb]">ROC Compliance</span></h1>
               <p className="text-base sm:text-lg mt-4 sm:mt-6 mb-8 sm:mb-12">Providing Consultancy services in the matters of Companies Act, 2013, SEBI Act, 1992, IPR Laws and many other Commercial and Economic Laws.</p>
             </div>
             <div>

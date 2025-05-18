@@ -9,7 +9,7 @@ function Testimony() {
       </div>
       <div className='max-w-full md:max-w-2xl'>
         <h2 className={`${calistoga.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug sm:leading-16 text-center md:text-left`}>
-          Their corporate secretarial service saved us from <br className='hidden md:block'></br><span className='text-green-800'> major compliance</span> issues and costly delays. We'd have been lost without their support. 
+          Their corporate secretarial service saved us from <br className='hidden md:block'></br><span className='text-[#3E8BC2]'> major compliance</span> issues and costly delays. We'd have been lost without their support. 
         </h2>
         <p className='mt-4 text-center md:text-left'>
           <span className='font-bold'>Pulkit Gupta</span>

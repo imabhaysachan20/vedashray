@@ -22,7 +22,7 @@ function Hero() {
         <div className="flex text-gray-800 text-lg sm:text-xl font-bold tracking-tighter mt-2 sm:mt-4">
         सत्यं वद। धर्मं चर। 🇮🇳
         </div>
-        <div className="w-[100px] sm:w-[150px] h-2 bg-[#54D186] rounded-3xl"></div>
+        <div className="w-[100px] sm:w-[150px] h-2 bg-[#5486d1] rounded-3xl"></div>
         <p className='font-semibold text-sm sm:text-base'>Practicing Company Secretaries</p>
         <QuoteComponent/>
     </div>
