@@ -6,7 +6,7 @@ function Post({obj}) {
   return (
     <div className='mt-16 font-serif leading-8 lg:w-[90%]'>
       <RichTextRenderer richTextDocument={obj}/>
-      <p className='text-lg text-gray-500 mt-8 mb-16'>~Team Vijyapana</p>
+      <p className='text-lg text-gray-500 mt-8 mb-16'>~Team Vedashray</p>
     </div>
   )
 }
