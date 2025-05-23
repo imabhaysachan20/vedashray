@@ -35,7 +35,7 @@ function Header() {
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo/Heading */}
           <div className="flex-shrink-0 flex items-center gap-x-4 sm:gap-x-8">
-            <Link href={"./"}><h1 className={`text-2xl sm:text-3xl uppercase font-bold ${calistoga.className}`}>Vedashray</h1></Link>
+            <Link href={"/"}><h1 className={`text-2xl sm:text-3xl uppercase font-bold ${calistoga.className}`}>Vedashray</h1></Link>
             <div className='hidden md:block h-6 w-0.5 bg-gray-300'></div>
             <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
             {navItems.map((item) => (
