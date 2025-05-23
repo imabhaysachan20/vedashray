@@ -13,10 +13,11 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { name: 'Home', href: './#top' },
+    { name: 'Home', href: '/#top' },
     { name: 'About', href: './#about' },
     { name: 'Service', href: './#services' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
   ]
 
   const socialIcons = [
