@@ -23,9 +23,9 @@ function Header() {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Insights', href: '#insights' },
+    { name: 'Services', href: '/#services' },
+    { name: 'About', href: '/#about' },
+    { name: 'Insights', href: '/#insights' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -55,7 +55,7 @@ function Header() {
                     alt="Vedashray Logo"
                     width={150}
                     height={60}
-                    className="w-auto h-20 sm:h-16 object-contain"
+                    className="w-auto h-18 sm:h-16 object-contain"
                   
                 />
             </Link>

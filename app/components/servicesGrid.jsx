@@ -2,8 +2,9 @@
 import React from 'react'
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { FaBalanceScale, FaFileContract, FaChartLine, FaGlobeAmericas, FaLightbulb, FaHandshake } from "react-icons/fa"
+import { useRouter } from 'next/navigation'
+import { montserrat } from '../fonts/fonts' // Ensure this path is correct based on your project structure
 
-// 
 const servicesData = [
   {
     icon: <FaBalanceScale className="w-8 h-8" />,
@@ -17,7 +18,7 @@ const servicesData = [
     icon: <FaFileContract className="w-8 h-8" />,
     title: "Secretarial Audit & Meetings",
     items: [
-      "Secretarial Audit- Compliance Health Check, Certificate in MGT-8",
+      "Secretarial Audit - Compliance Health Check, Certificate in MGT-8",
       "Meetings - Issuance of Notice, agenda, and preparation of minutes of Board meetings, Committee meetings and general meetings"
     ]
   },
@@ -41,8 +42,8 @@ const servicesData = [
     icon: <FaLightbulb className="w-8 h-8" />,
     title: "Portfolio Management Services Compliances",
     items: [
-      "Monthly compliance: Filing of SEBI Monthly report in SEBI and APMI, Cyber compliances, Website updation, reports to clients",
-      "Setup of Foreign Subsidiaries, Branch & Liaison Offices"
+      "Monthly compliance - Filing of SEBI Monthly report in SEBI and APMI, Cyber compliances, Website updation, reports to clients",
+      "Setup of Foreign Subsidiaries - Branch & Liaison Offices"
     ]
   },
   {
@@ -56,37 +57,45 @@ const servicesData = [
 ]
 
 function ServicesGrid() {
+  const router = useRouter()
+
+  const handleRedirect = (service) => {
+    router.push(`/contact?source=${service}`)
+  }
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
       {servicesData.map((service, index) => (
-        
-        <Card key={index} className="bg-white border-none shadow-md hover:shadow-xl transition-shadow duration-300 h-full rounded-xl overflow-hidden">
+        <Card 
+          key={index}
+          onClick={() => handleRedirect(service.title)}
+          className="bg-white border-none shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full rounded-xl overflow-hidden group"
+        >
           <CardHeader className="pb-2">
-            
             <div className="flex flex-col items-center text-center gap-4 mb-4">
-              <div className="text-[#320b54] p-3 rounded-full bg-[#E3DBEB]">
+              <div className="text-[#320b54] p-4 rounded-full bg-[#E3DBEB] group-hover:bg-[#320b54] group-hover:text-white transition-colors duration-300">
                 {service.icon}
               </div>
-              <CardTitle className="text-xl sm:text-2xl font-bold text-[#320b54] leading-tight">
+
+              <CardTitle className={`text-xl sm:text-2xl font-bold text-[#320b54] leading-tight ${montserrat.className}`}>
                 {service.title}
               </CardTitle>
             </div>
           </CardHeader>
+          
           <CardContent>
-
             <ul className="space-y-3">
               {service.items.map((item, itemIndex) => {
-                
-                const [title, ...descriptionParts] = item.split(' - ');
-                const description = descriptionParts.join(' - ');
+                const parts = item.split(' - ');
+                const title = parts[0];
+                const description = parts.slice(1).join(' - ');
 
                 return (
-                  <li key={itemIndex} className="flex items-start gap-3 text-[#320b54]/80 leading-relaxed">
-                    <span className="h-2 w-2 mt-2 rounded-full bg-[#320b54] flex-shrink-0" />
+                  <li key={itemIndex} className={`flex items-start gap-3 text-[#320b54]/80 leading-relaxed text-sm sm:text-base ${montserrat.className}`}>
+                    <span className="h-2 w-2 mt-2 rounded-full bg-[#320b54] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                     <span>
-                      
-                      <strong className="text-[#320b54] font-semibold">{title}</strong>
-                      {description && <span> - {description}</span>}
+                      <strong className="text-[#320b54] font-semibold block sm:inline">{title}</strong>
+                      {description && <span className="block sm:inline sm:ml-1 text-gray-600"> - {description}</span>}
                     </span>
                   </li>
                 )

@@ -9,8 +9,8 @@ function About() {
       <div className="container mx-auto px-4 sm:px-8 lg:px-12">
         
 
-        <div className="text-center mb-12 lg:mb-16 max-w-4xl mx-auto">
-          <h2 className={`text-4xl sm:text-5xl font-bold text-[#320b54] mb-6 ${calistoga.className}`}>
+        <div className="text-center mb-2 lg:mb-16 max-w-4xl mx-auto">
+          <h2 className={`text-4xl sm:text-5xl font-bold text-[#320b54] mb-6 sm:mb-3${calistoga.className}`}>
             About Us
           </h2>
           <p className={`text-base sm:text-lg text-[#320b54]/80 leading-relaxed ${montserrat.className}`}>
