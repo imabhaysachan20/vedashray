@@ -55,7 +55,7 @@ function ContactForm() {
     e.target.reset();
   }, []);
   return (
-    <div className="container mx-auto my-24 p-6 md:p-10 bg-[#f7f5f0] rounded-lg">
+    <div className="container mx-auto my-24 p-6 md:p-10 bg-[#ffff] rounded-lg">
       <h1 className="text-4xl font-bold text-center mb-6 text-gray-900">
         Connect with Us
       </h1>

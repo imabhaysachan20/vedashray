@@ -1,106 +1,152 @@
 "use client"
-import React, { useEffect, useState } from 'react'
-
-import { Menu, X, Facebook, Twitter, Instagram, LucideGavel, LucideGalleryVertical, ArrowRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
-import {calistoga} from "@/app/fonts/fonts"
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
+
+const FilledArrowRight = ({ className }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+  >
+    <path d="M6 4l12 8-12 8V4z" />
+  </svg>
+)
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { name: 'Home', href: '/#top' },
-    { name: 'About', href: '/#about' },
-    { name: 'Service', href: '/#services' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '#services' },
+    { name: 'About', href: '#about' },
+    { name: 'Insights', href: '#insights' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
   ]
+
 
   const socialIcons = [
-    { icon: <FaFacebook className="w-4 h-4" />, href: '#' },
-    { icon: <FaTwitter className="w-4 h-4" />, href: '#' },
-    { icon: <FaLinkedin className="w-4 h-4" />, href: 'https://www.linkedin.com/company/vedashray-corpsec-llp/' },
-    { icon: <FaInstagram className="w-4 h-4" />, href: 'https://www.instagram.com/vedashray_corpsec_llp' },
+    { icon: <FaSquareXTwitter className="w-6 h-6 text-black" />, href: '#' },
+    { icon: <FaSquareInstagram className="w-6 h-6 text-black" />, href: 'https://www.instagram.com/vedashray_corp/' },
+    { icon: <FaLinkedin className="w-6 h-6 text-black" />, href: 'https://www.linkedin.com/company/vedashray-corpsec-llp/' },
   ]
+
   const { scrollYProgress } = useScroll();
+  const background = useTransform(scrollYProgress, [0, 0.1], ['#ffff', '#ffffff']);
+  const shadow = useTransform(scrollYProgress, [0, 0.1], ['none', '0 4px 6px -1px rgb(0 0 0 / 0.1)']);
 
-  const background = useTransform(scrollYProgress, [0, 0.1], ['#f7f5f0', '#fff']);
   return (
-    <motion.div style={{ background }} className="fixed top-0 left-0 right-0 z-50 bg-transparent ">
-      <div className="container mx-auto py-2 sm:py-3 lg:py-4 px-4 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-14 sm:h-16">
-          {/* Logo/Heading */}
-          <div className="flex-shrink-0 flex items-center gap-x-4 sm:gap-x-8">
-            <Link href={"/"}><h1 className={`text-2xl sm:text-3xl uppercase font-bold ${calistoga.className}`}>Vedashray</h1></Link>
-            <div className='hidden md:block h-6 w-0.5 bg-gray-300'></div>
-            <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="font-bold text-[14px] sm:text-[15px] text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
+    <motion.div 
+      style={{ background, boxShadow: shadow }} 
+      className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
+    >
+      <div className="container mx-auto py-1 sm:py-3 px-4 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+
+          <div className="flex items-center gap-x-6">
+            <Link href={"/"} className="flex-shrink-0">
+                <img
+                    src="/logo.png"
+                    alt="Vedashray Logo"
+                    width={150}
+                    height={60}
+                    className="w-auto h-20 sm:h-16 object-contain"
+                  
+                />
+            </Link>
+            <div className='hidden md:block h-8 w-[1px] bg-gray-300'></div>
+
+            <nav className="hidden md:flex items-center space-x-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="font-bold text-[15px] text-[#320b54] hover:text-[#5a1e8a] transition-colors font-sans"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
           </div>
 
-          {/* Desktop Navigation */}
-          
-
-          {/* Desktop Social Icons and CTA */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
-            <div className="flex gap-x-3 lg:gap-x-4">
-            {socialIcons.map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                className="text-gray-900"
-              >
-                {social.icon}
-              </a>
-            ))}
+          <div className="hidden md:flex items-center gap-x-6">
+            <div className="flex items-center gap-x-3">
+              {socialIcons.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="text-black hover:text-[#320b54] transition-colors p-1"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
-            <div className='h-6 w-0.5 bg-gray-300'></div>
-            <Link href={'/contact'}><Button size={'sm'} className="rounded-4xl font-bold text-xs sm:text-sm cursor-pointer">Get In Touch <ArrowRight className="h-4 w-4 ml-1"/></Button></Link>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Sheet >
+            <div className='h-8 w-[1px] bg-gray-300'></div>
+
+            <Link href={'/contact'}>
+              <Button 
+                size={'sm'} 
+                className="bg-[#320b54] hover:bg-[#24063d] text-white rounded-[6px] px-6 py-5 font-bold text-sm shadow-md"
+              >
+                
+                Get In Touch <FilledArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+          <div className="md:hidden flex items-center">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-9 w-9 p-0">
-                  <Menu className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="h-10 w-10 p-0 text-[#320b54]">
+                  <Menu className="h-7 w-7" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] sm:w-[350px] p-2">
+              <SheetContent side="right" className="w-[300px] p-6 bg-[#ffff]">
                 <div className="flex flex-col space-y-6 mt-8">
+                  <div className="w-32 mb-4">
+                      <img
+                        src="/logo.png" 
+                        alt="Vedashray" 
+                        width={120} 
+                        height={50} 
+                        className="w-full h-auto"
+                      />
+                  </div>
+                  
                   {navItems.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
-                      className="text-lg font-medium text-gray-600 hover:text-gray-900"
+                      onClick={() => setIsOpen(false)}
+                      className="text-lg font-bold text-[#320b54]"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
-                  <div className="flex space-x-5 mt-4">
+                  
+                  <div className="h-[1px] w-full bg-gray-300 my-2"></div>
+
+                  <div className="flex space-x-4 justify-start">
                     {socialIcons.map((social, index) => (
                       <a
                         key={index}
                         href={social.href}
-                        className="text-gray-600 hover:text-gray-900"
+                        className="text-black hover:text-[#320b54]"
                       >
                         {social.icon}
                       </a>
                     ))}
                   </div>
-                  <Link href={"/contact"}><Button className="mt-4 w-full">Get In Touch</Button></Link>
+                  <Link href={"/contact"} onClick={() => setIsOpen(false)}>
+                    <Button className="mt-4 w-full bg-[#320b54] hover:bg-[#24063d] rounded-full font-bold">
+                        Get In Touch
+                    </Button>
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
