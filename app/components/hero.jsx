@@ -9,7 +9,7 @@ function Hero() {
   return (
     <section 
       id="top" 
-      className='relative w-full mt-14 bg-white overflow-hidden pb-0 mb-0 flex flex-col lg:block justify-end min-h-[85vh] lg:min-h-[95vh]'
+      className='relative w-full mt-14 bg-white overflow-hidden pb-0 mb-0 flex flex-col lg:block justify-end min-h-[50vh] lg:min-h-[95vh]'
     >
       <div className='container relative z-20 mx-auto px-4 sm:px-8 lg:px-12 pt-16 lg:pt-0 lg:h-full lg:flex lg:items-end order-1'>
         
@@ -42,7 +42,7 @@ function Hero() {
         </div>
 
       </div>
-      <div className="relative order-4 w-full h-[280px] sm:h-[400px] lg:absolute lg:bottom-0 lg:left-0 lg:h-[600px] z-0 pointer-events-none mt-auto lg:mt-5">
+      <div className="relative order-4 w-full h-[30vh] sm:h-[25vh] lg:absolute lg:bottom-0 lg:left-0 lg:h-[90vh] z-0 pointer-events-none mt-auto lg:mt-5">
           <Image
             src="/HeroBg.png"
             alt="Lady Justice Statue"

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 
 function Footer() {
   return (
-    <footer className='relative w-full text-white overflow-hidden'>
+    <footer id='contact' className='relative w-full text-white overflow-hidden'>
 
       <div className="absolute inset-0 z-0">
          <Image 
