@@ -15,11 +15,8 @@ const calistoga = Calistoga({
 });
 
 export const metadata = {
-  title: "Vedashray Corpsec LLP", 
+  title: "Vedashray", 
   description: "Company Secretaries & Legal Compliance",
-  icons: {
-    icon: '/logo.png',
-  },
 };
 
 export default function RootLayout({ children }) {
