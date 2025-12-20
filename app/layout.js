@@ -13,10 +13,14 @@ const calistoga = Calistoga({
   display: 'swap',
   weight: '400',
 });
-
 export const metadata = {
   title: "Vedashray", 
   description: "Company Secretaries & Legal Compliance",
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png', 
+    apple: '/icon.png',
+  }
 };
 
 export default function RootLayout({ children }) {

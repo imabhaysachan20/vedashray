@@ -3,12 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import { calistoga } from '../fonts/fonts'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
-import { FaSquareXTwitter, FaSquareInstagram, FaLinkedin } from 'react-icons/fa6'
+import { FaSquareXTwitter, FaSquareInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa6'
 import { Button } from "@/components/ui/button"
 
 function Footer() {
   return (
-    <footer id='contact' className='relative w-full text-white overflow-hidden'>
+    <footer id='contact' className='relative w-full text-gray-100 overflow-hidden'>
 
       <div className="absolute inset-0 z-0">
          <Image 
@@ -25,7 +25,7 @@ function Footer() {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-start'>
           
           
-          <div className='bg-white/90 backdrop-blur-sm p-6 sm:p-8 rounded-lg shadow-2xl w-full max-w-lg mx-auto lg:mx-0'>
+          <div className='bg-gray-300 backdrop-blur-sm p-6 sm:p-8 rounded-lg shadow-2xl w-full max-w-lg mx-auto lg:mx-0'>
              
              
              <h2 className={`text-3xl sm:text-4xl font-bold text-[#320b54] mb-6 ${calistoga.className}`}>
@@ -49,29 +49,29 @@ function Footer() {
              </div>
 
              
-             <form className='space-y-4 text-gray-700'>
+             <form className='bg-gray-100 space-y-4 text-gray-700 p-2.5'>
                 
                 <div className='grid grid-cols-4 items-center gap-4'>
                    <label className='font-bold text-[#320b54] col-span-1'>Name</label>
-                   <input type="text" className='col-span-3 bg-gray-200/80 rounded h-10 px-3 focus:outline-none focus:ring-2 focus:ring-[#320b54]' />
+                   <input type="text" className='col-span-3 bg-gray-300 rounded h-10 px-3 focus:outline-none focus:ring-2 focus:ring-[#320b54]' />
                 </div>
                 
                 
                 <div className='grid grid-cols-4 items-center gap-4'>
                    <label className='font-bold text-[#320b54] col-span-1'>Phone</label>
-                   <input type="text" className='col-span-3 bg-gray-200/80 rounded h-10 px-3 focus:outline-none focus:ring-2 focus:ring-[#320b54]' />
+                   <input type="text" className='col-span-3 bg-gray-300 rounded h-10 px-3 focus:outline-none focus:ring-2 focus:ring-[#320b54]' />
                 </div>
 
                 
                 <div className='grid grid-cols-4 items-center gap-4'>
                    <label className='font-bold text-[#320b54] col-span-1'>Email</label>
-                   <input type="email" className='col-span-3 bg-gray-200/80 rounded h-10 px-3 focus:outline-none focus:ring-2 focus:ring-[#320b54]' />
+                   <input type="email" className='col-span-3 bg-gray-300 rounded h-10 px-3 focus:outline-none focus:ring-2 focus:ring-[#320b54]' />
                 </div>
 
                 
                 <div className='grid grid-cols-4 items-start gap-4'>
                    <label className='font-bold text-[#320b54] col-span-1 pt-2'>Details</label>
-                   <textarea rows={4} className='col-span-3 bg-gray-200/80 rounded p-3 focus:outline-none focus:ring-2 focus:ring-[#320b54] resize-none'></textarea>
+                   <textarea rows={4} className='col-span-3 bg-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-[#320b54] resize-none'></textarea>
                 </div>
 
                 
@@ -84,10 +84,10 @@ function Footer() {
           </div>
 
           
-          <div className='flex flex-col h-full justify-between gap-8'>
+          <div className='flex flex-col h-full justify-bottom gap-8'>
              
              
-             <div className="w-full h-64 sm:h-80 lg:h-full min-h-[300px] rounded-lg overflow-hidden shadow-lg border-2 border-white/20 bg-gray-200">
+             {/* <div className="w-full h-64 sm:h-80 lg:h-full min-h-[300px] rounded-lg overflow-hidden shadow-lg border-2 border-white/20 bg-gray-200">
                 <iframe 
                   width="100%" 
                   height="100%" 
@@ -98,12 +98,12 @@ function Footer() {
                   
                   src="https://maps.google.com/maps?q=Capital+Athena+Sector+1+Greater+Noida+West&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 ></iframe>
-             </div>
+             </div> */}
 
-             <div className='flex flex-col items-center lg:items-end text-center lg:text-right space-y-4'>
+             <div className='flex flex-col items-center lg:items-end text-center absolute lg:bottom-22 right-10 lg:text-right space-x-1'>
                 
                 <div className='flex items-center gap-4'>
-                    <a href='#' className='bg-white p-2 rounded hover:bg-gray-200 transition-colors group'>
+                    <a href='https://x.com/vedashray_corp?s=11' className='bg-white p-2 rounded hover:bg-gray-200 transition-colors group'>
                         <FaSquareXTwitter className="text-[#320b54] text-2xl group-hover:scale-110 transition-transform" />
                     </a>
                     <a href="https://www.instagram.com/vedashray_corp/" className='bg-white p-2 rounded hover:bg-gray-200 transition-colors group'>
@@ -111,6 +111,9 @@ function Footer() {
                     </a>
                     <a href='https://www.linkedin.com/company/vedashray-corpsec-llp/' className='bg-white p-2 rounded hover:bg-gray-200 transition-colors group'>
                         <FaLinkedin className="text-[#320b54] text-2xl group-hover:scale-110 transition-transform" />
+                    </a>
+                    <a href='https://www.facebook.com/share/1Cemy4rrPt/?mibextid=wwXIfr' className='bg-white p-2 rounded hover:bg-gray-200 transition-colors group'>
+                        <FaFacebook className="text-[#320b54] text-2xl group-hover:scale-110 transition-transform" />
                     </a>
                 </div>
 

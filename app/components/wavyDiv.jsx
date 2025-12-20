@@ -5,12 +5,12 @@ import { calistoga, montserrat } from '../fonts/fonts'
 
 function About() {
   return (
-    <section id="about" className="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-12">
+    <section id="about" className="pt-10 sm:pt-10 pb-1 sm:pb-10 bg-white">
+      <div className="container mx-auto px-2 sm:px-8 lg:px-12">
         
 
-        <div className="text-center mb-2 lg:mb-16 max-w-4xl mx-auto">
-          <h2 className={`text-4xl sm:text-5xl font-bold text-[#320b54] mb-6 sm:mb-3${calistoga.className}`}>
+        <div className="text-center  max-w-4xl mx-auto">
+          <h2 className={`text-4xl sm:text-5xl font-bold text-[#320b54] mb-3 sm:mb-3${calistoga.className}`}>
             About Us
           </h2>
           <p className={`text-base sm:text-lg text-[#320b54]/80 leading-relaxed ${montserrat.className}`}>
@@ -19,7 +19,7 @@ function About() {
         </div>
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-3 items-center">
           
 
           <div className="lg:col-span-5 flex justify-center lg:justify-center relative">

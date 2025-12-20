@@ -59,8 +59,8 @@ const servicesData = [
 function ServicesGrid() {
   const router = useRouter()
 
-  const handleRedirect = (service) => {
-    router.push(`/contact?source=${service}`)
+  const handleRedirect = () => {
+    router.push(`/#contact`)
   }
 
   return (

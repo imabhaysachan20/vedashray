@@ -83,7 +83,7 @@ function Header() {
 
             <div className='h-8 w-[1px] bg-gray-300'></div>
 
-            <Link href={'/contact'}>
+            <Link href={'/#contact'}>
               <Button 
                 size={'sm'} 
                 className="bg-[#320b54] hover:bg-[#24063d] text-white rounded-[6px] px-6 py-5 font-bold text-sm shadow-md"
@@ -133,7 +133,7 @@ function Header() {
                       </a>
                     ))}
                   </div>
-                  <Link href={"/contact"} onClick={() => setIsOpen(false)}>
+                  <Link href={"/#contact"} onClick={() => setIsOpen(false)}>
                     <Button className="mt-4 w-full bg-[#320b54] hover:bg-[#24063d] rounded-full font-bold">
                         Get In Touch
                     </Button>

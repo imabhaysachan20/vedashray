@@ -1,22 +1,25 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { calistoga, montserrat } from '../fonts/fonts'
 
 function Insights() {
   const insights = [
     {
-      
+      id: 'annual-filings',
       image: '/blog1.png', 
       title: "Why annual filings are more than just a compliance task",
       description: "Your annual return filing and ROC compliance activities are far more important than routine paperwork"
     },
-    {
+    {   
+      id: 'aoc-4-mystery',
       image: '/blog2.png',
       title: "Decoding the Mystery of the AOC-4: MCA Filings in India",
       description: "One of the most critical tasks for every company is the annual filing with the Ministry of Corporate Affairs (MCA)"
     },
     {
+      id: 'sbo-concept',
       image: '/blog3.png',
       title: "Unraveling the 'Significant Beneficial Owner' (SBO) Concept in India",
       description: "An SBO is an individual who holds ultimate beneficial interest of not less than 10% in a company"
@@ -25,7 +28,7 @@ function Insights() {
 
   return (
     <section id="insights" className="py-16 sm:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="container mx-auto px-4 sm:px-5 lg:px-10">
         
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -40,7 +43,7 @@ function Insights() {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {insights.map((item, index) => (
-            <div key={index} className="flex flex-col group cursor-pointer">
+            <Link href={`/insights/${item.id}`} key={index} className="flex flex-col group cursor-pointer">
               
               {/* Card Image */}
               <div className="relative w-full h-56 sm:h-64 mb-6 rounded-xl overflow-hidden border border-gray-100 shadow-sm">
@@ -61,7 +64,7 @@ function Insights() {
                   {item.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
