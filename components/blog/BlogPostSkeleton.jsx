@@ -12,7 +12,7 @@ function BlogPostCardSkeleton() {
     return <div className="'mt-36 md:mt-28"> <div className='mb-16'>
     <p className='text-center mb-1 font-medium tracking-wide'>Explore Our Blog Posts</p>
     <h2 className='text-4xl text-center text-gray-800  font-bold tracking-wider'>
-      Vijyapana Blog
+      Vedashray Blog
     </h2>
     </div><div className=" gap-x-12 gap-y-20 md:mt-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {new Array(3).fill(0).map((_,idx)=>{return (    
