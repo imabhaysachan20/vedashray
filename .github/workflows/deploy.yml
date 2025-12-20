@@ -41,4 +41,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 21         
           local-dir: ./out/                              # The output folder after running `next export`
+          create-dirs: true 
+          dangerous-clean-slate: true
           server-dir: /domains/vedashray.com/public_html/                    # The destination directory on your Hostinger server
