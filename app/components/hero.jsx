@@ -24,7 +24,7 @@ function Hero() {
               Reliable Corporate Secretarial & Legal <br className="hidden sm:block" />  Support for Enterprises, MSMEs, and <br className="hidden sm:block" /> Startups across India
             </p>
             
-            <Link href={'/contact'}>
+            <Link href={'/#contact'}>
               <Button 
                 variant="outline"
                 className={`

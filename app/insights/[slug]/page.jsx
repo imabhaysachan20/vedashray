@@ -35,7 +35,7 @@ export default async function BlogPost({ params }) {
 
   return (
     <article className="min-h-screen bg-white pt-24 pb-16">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="container mx-auto px-1 lg:px-12">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           
@@ -43,7 +43,7 @@ export default async function BlogPost({ params }) {
           <div className="lg:col-span-5">
             <h1 className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#320b54] leading-tight sticky top-28 ${calistoga.className}`}>
               {post.title}
-                           <div className="pt-8 absolute left-5 border-t border-gray-200 text-sm text-[#320b54]/60">
+            <div className="pt-2 absolute left-0 border-t border-gray-200 text-sm text-[#320b54]/60">
                 © 2025 Vedashray Corpsec LLP. All rights reserved
              </div>
             </h1>
